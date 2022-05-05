@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Indie+Flower&display=swap');
+
+.App {
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+  font-size: calc(10px + 2vmin);
+  margin: calc(2rem + 10vmin) 0;
+}
+
+.App-header {
+  background-color: rgba(228, 183, 255, 1);
+  width: 100%;
+  display: flex; /*CAMBIAR CON MEDIAQUERIES*/
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: calc(3px + 2vmin);
+  gap: 1.5rem;
+}
+
+.logo {
+  /* logo */
+width: calc(3rem + 1vmin);
+height: fit-content;
+position: relative;
+left: 1rem;
+}
+
+.title {
+  position: relative;
+  font-family: 'Indie Flower', cursive;
+  color: rgba(47, 69, 187, 1);
+}
+
+.logout {
+  visibility: hidden;
+}
+
+h2 {
+  font-family: 'Comfortaa', cursive;
+  font-size: calc(1rem + 1vmin);
+}
+
+.icon {
+  width: 2rem;
+  height: fit-content;
+  position: relative;
+  top: calc(2.5vmin + 10px);
+  left: 10vmax;
+}
+
+.btn {
+  background-color: transparent;
+  margin: 4vmin 4vmin 4vmin calc(4vmin - 25px); /*3*/
+  border: 3px solid;
+  border-radius: 3rem;
+  width: 80%; /*50*/
+  height: 8vmax; /*5*/
+  font-size: calc(12px + 1vmin); /*13px + 1*/
+  box-shadow: 3px 3px 10px gray;
+  font-family: 'Comfortaa', cursive;
+  cursor: pointer;
+}
+
+p.btn-text {
+  width: 75%;
+  height: fit-content;
+  text-align: center;
+  position: relative;
+  margin: auto;
+  left: 8vmin;
+}
+
+.btn.email {
+  border-color: #2ad459;
+}
+
+.btn.google {
+  border-color: #ffc107;
+}
+
+.btn.twitter {
+  border-color: #55acee;
+}
+
+.logout-btn {
+  width: calc(1vmin + 20px);
+  height: calc(1vmin + 22.5px);
+  position: absolute;
+  top: calc(2.5vmin + 10px);
+  right: 5vmax;
+}
+
+.dashboard {
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+  font-size: calc(10px + 2vmin);
+  margin: 1rem;
+}
+
+.add-btn {
+  width: 2rem;
+  height: fit-content;
+}
