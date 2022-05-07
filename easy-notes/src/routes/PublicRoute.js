@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import Header from "../components/Header";
-import { logInWithGoogle } from "../firebase/firebase-auth";
+import { logInWithGoogle } from "../lib/firebase-auth";
 import Login from "../views/Login";
 import Register from "../views/Register";
 

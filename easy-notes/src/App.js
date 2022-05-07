@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 import PrivateRoute from "./routes/PrivateRoute";
-import { auth, logout } from "./firebase/firebase-auth";
-import { onAuthStateChanged } from "./firebase/firebase-imports";
+import { auth, logout } from "./lib/firebase-auth";
+import { onAuthStateChanged } from "./lib/firebase-imports";
 import PublicRoute from "./routes/PublicRoute";
 
 
@@ -19,7 +19,9 @@ function App() {
     }
   });
 
-  return isAuth ? <PrivateRoute logoutBtn={logout}/> : <PublicRoute />;
+  const user = auth.currentUser;
+
+  return isAuth ? <PrivateRoute user={user} logoutBtn={logout}/> : <PublicRoute />;
 }
 
 export default App;
