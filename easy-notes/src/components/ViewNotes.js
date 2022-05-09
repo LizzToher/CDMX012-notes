@@ -2,20 +2,21 @@ import { useEffect, useState } from "react";
 import GetNotes from "./GetNotes";
 
 const Note = () => {
-const [notes, setNotes] = useState([]);
+  const [notes, setNotes] = useState([]);
 
-useEffect(() => {
-    GetNotes({setNotes});
-}, []);
+  useEffect(() => {
+    GetNotes({ setNotes });
+  }, []);
 
-return (
+  return (
     <article className="notesContainer">
-        {notes.map((element) => (
-                    <section className="everyNoteContainer" key={element.id}>
-                <h3 key={element.title}>{element.title}</h3>
-                <p key={element.uid}>{element.note}</p>
-            </section>)
-        )}
-    </article>       
-)}
+      {notes.map((element) => (
+        <section className="noteCard" key={element.id}>
+          <h3>{element.title}</h3>
+          <p>{element.note}</p>
+        </section>
+      ))}
+    </article>
+  );
+};
 export default Note;

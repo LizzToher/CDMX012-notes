@@ -10,7 +10,7 @@ const PrivateRoute = ({ user, logoutBtn }) => {
       <img src={logoutIcon} className="logout-btn" alt="Cerrar sesión" onClick={logoutBtn}></img>
       <Header input={user.displayName} />
       <Routes>
-        <Route path="/" element={<Home user={user}/>} />
+        <Route path="/" element={<Home />} />
         <Route path="/add" element={<AddNote />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
