@@ -190,20 +190,14 @@ label {
 
 .noteCard {
   height: 9rem;
+  text-decoration: double;
 }
 
 .noteCard:nth-child(odd) {
   background: #b1f4cc;
 }
 
-.noteCard:nth-child(even) {
-  background: #ffdbf5;
-}
-
-.noteCard:nth-child(1) {
-  background: #f4e1b0;
-}
-
-.noteCard:nth-child(3n+4) {
-  background: #f4e1b0;
+.notes {
+  text-decoration: none;
+  color: #000;
 }
