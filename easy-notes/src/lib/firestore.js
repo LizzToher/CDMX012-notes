@@ -8,6 +8,7 @@ import {
   orderBy,
   query,
   serverTimestamp,
+  updateDoc,
 } from "./firebase-imports";
 
 export const saveNote = async ({ title, note }) => {
@@ -24,3 +25,11 @@ export const saveNote = async ({ title, note }) => {
 export const q = query(collection(db, "notes"), orderBy("date", "desc"));
 
 export const DeleteNote = (id) => deleteDoc(doc(db, "notes", id));
+
+export const updateNote = async ({id, newTitle, newNote}) => {
+  await updateDoc(doc(db, 'notes', id), {
+    date: serverTimestamp(),
+    title: newTitle,
+    note: newNote,
+  });
+}

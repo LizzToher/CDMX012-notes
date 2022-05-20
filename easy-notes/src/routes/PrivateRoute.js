@@ -4,6 +4,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import Home from "../views/Home";
 import { AddNote } from "../views/AddNote";
 import Note from "../views/Note";
+import UpdateNote from "../views/UpdateNote";
 
 const PrivateRoute = ({ user, logoutBtn }) => {
   return (
@@ -13,6 +14,7 @@ const PrivateRoute = ({ user, logoutBtn }) => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/:id" element={<Note />} />
+        <Route path="/:id/update" element={<UpdateNote />} />
         <Route path="/add" element={<AddNote />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
