@@ -28,9 +28,9 @@ export const AddNote = () => {
       <h2 className="addTitle">Agregar nota</h2>
       <section className="Add-Container">
         <label className="titleNote">Título</label>
-        <input className="input text" type={"text"} placeholder={"Nota 1"} value={title} onChange={(e) => setTitle(e.target.value)} />
+        <input className="input text" type={"text"} placeholder={"Nota 1"} onChange={(e) => setTitle(e.target.value)} />
         <label className="note">Nota</label>
-        <textarea className="input textarea" placeholder={"Escribe aquí tu nota..."} value={note} onChange={(e) => setNote(e.target.value)} />
+        <textarea className="input textarea" placeholder={"Escribe aquí tu nota..."} onChange={(e) => setNote(e.target.value)} />
         <img src={addBtn} className="addNote-btn" alt="agregar nota" onClick={submitNote}></img>
       </section>
     </main>

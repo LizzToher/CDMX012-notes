@@ -3,7 +3,7 @@ import { Buttons } from "../components/Buttons";
 
 const Login = ({loginBtn}) => {
   return (
-    <main>
+    <main className="form">
     <article className="App">
       <p>¡Inicia sesión en segundos!</p>
       <Buttons loginBtn={loginBtn} />

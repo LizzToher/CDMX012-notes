@@ -12,12 +12,12 @@ const ViewNotes = () => {
   return (
     <article className="notesContainer">
       {notes.map((element) => (
-        <Link to={"" + element.id}>
-          <section className="noteCard" key={element.id}>
+        <section className="noteCard" key={element.id}>
+          <Link to={"" + element.id}>
             <h3 className="titleText notes">{element.title}</h3>
             <p className="noteText notes">{element.note}</p>
-          </section>
-        </Link>
+          </Link>
+        </section>
       ))}
     </article>
   );

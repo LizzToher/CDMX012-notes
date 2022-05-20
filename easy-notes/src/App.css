@@ -11,7 +11,6 @@
   background-color: rgba(228, 183, 255, 1);
   width: 100%;
   display: flex;
-  /*CAMBIAR CON MEDIAQUERIES*/
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
@@ -20,7 +19,6 @@
 }
 
 .logo {
-  /* logo */
   width: calc(3rem + 1vmin);
   height: fit-content;
   position: relative;
@@ -54,15 +52,11 @@ h2 {
 .btn {
   background-color: transparent;
   margin: 4vmin 4vmin 4vmin calc(4vmin - 25px);
-  /*3*/
   border: 3px solid;
   border-radius: 3rem;
   width: 80%;
-  /*50*/
   height: 8vmax;
-  /*5*/
   font-size: calc(12px + 1vmin);
-  /*13px + 1*/
   box-shadow: 3px 3px 10px gray;
   font-family: 'Comfortaa', cursive;
   cursor: pointer;
@@ -135,12 +129,13 @@ p.btn-text {
   margin: 2rem 0;
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-auto-rows: 2rem;
+  grid-auto-rows: 0.7fr;
   grid-area: 2 / 2 / span 11 / span 2;
 }
 
 label {
   grid-column: 1 / span 2;
+  margin: 10px;
 }
 
 .titleNote {
@@ -153,7 +148,9 @@ label {
 
 .input {
   grid-column: 1 / span 2;
-  /*justify-self: stretch;*/
+  width: 90%;
+  justify-self: center;
+
 }
 
 .text {
@@ -163,12 +160,8 @@ label {
 .textarea {
   grid-row: 5 / span 5;
   text-align: start;
-  justify-self: stretch;
+  justify-self: center;
 }
-
-/*.add-note{
-  position: relative;
-}*/
 
 .addNote-btn {
   width: 2rem;
@@ -188,16 +181,139 @@ label {
   overflow: auto;
 }
 
-.noteCard {
-  height: 9rem;
-  text-decoration: double;
+section.noteCard {
+  height: 6rem;
 }
 
 .noteCard:nth-child(odd) {
   background: #b1f4cc;
 }
 
-.notes {
-  text-decoration: none;
+.noteCard:nth-child(even) {
+  background: #ffdbf5;
+}
+
+h3.titleText.notes {
   color: #000;
+  margin: 10px; 
+  font-size: 1rem;
+}
+
+p.noteText.notes {
+  margin: 0 5px;
+  font-size: 0.8rem;
+}
+
+a:-webkit-any-link {
+  color: #000;
+  cursor: pointer;
+  text-decoration: none;
+  
+}
+
+.selectedNoteContainer {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: 2rem 1fr 2rem;
+  justify-items: center;
+  align-items: center;
+  grid-gap: 10px;
+}
+
+h2.titleText.note {
+  grid-area: 1 / 2;
+}
+
+p.noteText.note {
+  grid-area: 2 / 2;
+  font-size: 1.5rem;
+}
+
+.update-btn, .delete-btn {
+  grid-area: 3 / 2;
+  width: 1.5rem;
+  height: fit-content;
+}
+.update-btn{
+  position: relative;
+  left: 25%;
+}
+
+.delete-btn {
+  position: relative;
+  right: 25%;
+}
+
+@media (max-width: 325px) {
+  h3.titleText.notes {
+    margin: 10px; 
+    font-size: 1.5rem;
+  }
+  
+  p.noteText.notes {
+    margin: 0 5px;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 760px) {
+  main.form {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+  }
+
+  .App {
+    grid-area: 1 / 2;
+    width: 100%;
+    font-size: calc(5px + 2vmin);
+    margin: calc(2rem + 5vmin) 0;
+    border: 2px solid #cecece;
+    border-radius: 30px;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .btn {
+    margin: 3vmin;
+    width: 45%;
+    height: 6vmax;
+  }
+
+  p.btn-text {
+    width: 75%;
+    left: 3vmin;
+    font-size: calc(7px + 1vmin);
+  }
+
+  .icon {
+    width: 1.5rem;
+    top: calc(1vmin + 10px);
+    left: 10vmax;
+  }
+
+  img.icon.google {
+    top: calc(-1vmin + 15px);
+  }
+
+  img.icon.twitter {
+    top: calc(-1vmin + 15px);
+  }
+
+  .notesContainer {
+    height: 65vmin;
+    overflow: auto;
+  }
+
+  section.noteCard {
+    margin: 1rem 0;
+    height: 9rem;
+  }
+
+  .Add-Section {
+    grid-template-columns: 20% 30% 30% 20%;
+  }
+
+  p.noteText.note {
+    font-size: 2rem;
+  }
 }

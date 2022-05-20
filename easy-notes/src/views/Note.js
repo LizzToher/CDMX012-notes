@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import returnBtn from "../assets/return-arrow.png";
 import deleteNote from "../assets/delete-note.png";
 import updateNote from "../assets/update-note.png";
@@ -36,10 +36,12 @@ const Note = () => {
         .filter((note) => note.id === id)
         .map((element) => (
           <>
-            <h2 className="titleText notes">{element.title}</h2>
-            <p className="noteText notes">{element.note}</p>
-            <img src={deleteNote} alt="Eliminar nota" onClick={deleteThisNote}></img>
-            <img src={updateNote} alt="Editar nota"></img>
+          <article className="selectedNoteContainer">
+            <h2 className="titleText note">{element.title}</h2>
+            <p className="noteText note">{element.note}</p>
+            <img className="delete-btn" src={deleteNote} alt="Eliminar nota" onClick={deleteThisNote}></img>
+            <Link className="update-btn" to={"update"}><img className="update-btn" src={updateNote} alt="Editar nota"></img></Link>
+            </article>
           </>
         ))}
     </main>
